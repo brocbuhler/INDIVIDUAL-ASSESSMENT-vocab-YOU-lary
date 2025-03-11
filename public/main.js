@@ -7,14 +7,8 @@ import getCards from '../api/vocabApiCalls';
 
 const init = () => {
   document.querySelector('#app').innerHTML = `
-<div id='NavBar'>
-<div id ='flexNav>
-<h1 id='vocabPage'>Vocab Cards</h1>
-</div>
-</div>
-<div id='main-container'>
+<h1 id='default-page'>Test Page</h1>
 <button id="test-btn">TEST</button>
-</div>
   `;
   console.warn('YOU ARE UP AND RUNNING!');
   const testBTN = document.querySelector('#test-btn');
