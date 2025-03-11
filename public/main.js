@@ -3,7 +3,7 @@
 import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
 import ViewDirectorBasedOnUserAuthStatus from '../utils/viewDirector';
-import getStars from '../api/vocabApiCalls';
+import getStars from '../api/starsApiCalls';
 
 const init = () => {
   document.querySelector('#app').innerHTML = `

@@ -1,5 +1,5 @@
-import { createStar, getStars, updateStar } from './api/starsApiCalls';
-import starsPage from './pages/stars';
+import { createStar, getStars, updateStar } from '../api/starsApiCalls';
+import starsPage from '../pages/stars';
 
 const formEvents = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
