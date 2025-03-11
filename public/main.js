@@ -3,7 +3,7 @@
 import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
 import ViewDirectorBasedOnUserAuthStatus from '../utils/viewDirector';
-import getCards from '../api/vocabApiCalls';
+import getStars from '../api/vocabApiCalls';
 
 const init = () => {
   document.querySelector('#app').innerHTML = `
@@ -13,7 +13,7 @@ const init = () => {
   console.warn('YOU ARE UP AND RUNNING!');
   const testBTN = document.querySelector('#test-btn');
   testBTN.addEventListener('click', () => {
-    getCards().then(console.warn);
+    getStars().then(console.warn);
   });
   // USE WITH FIREBASE AUTH
   ViewDirectorBasedOnUserAuthStatus();
