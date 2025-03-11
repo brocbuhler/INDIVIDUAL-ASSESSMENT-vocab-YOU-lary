@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Main Sequence",
+    "img": "https://assets.science.nasa.gov/dynamicimage/assets/science/astro/universe/internal_resources/405/Red_Giant-1.jpeg?w=1186&h=1186&fit=clip&crop=faces%2Cfocalpoint"
+  },
+  {
+    "type": "Red Giants",
+    "img": "https://assets.science.nasa.gov/dynamicimage/assets/science/astro/universe/internal_resources/405/Red_Giant-1.jpeg?w=1186&h=1186&fit=clip&crop=faces%2Cfocalpoint"
+  },
+  {
+    "type": "White Dwarfs",
+    "img": "https://assets.science.nasa.gov/dynamicimage/assets/science/astro/universe/internal_resources/406/White_Dwarf-1.jpeg?w=1024&h=576&fit=clip&crop=faces%2Cfocalpoint"
+  },
+  {
+    "type": "Neutron Stars",
+    "img": "https://assets.science.nasa.gov/dynamicimage/assets/science/astro/universe/internal_resources/407/Neutron_Stars-1.jpeg?w=800&h=642&fit=clip&crop=faces%2Cfocalpoint"
+  },
+  {
+    "type": "Red Dwarfs",
+    "img": "https://assets.science.nasa.gov/dynamicimage/assets/science/astro/universe/internal_resources/408/red_dwarf-1.jpeg?w=1280&h=1255&fit=clip&crop=faces%2Cfocalpoint"
+  },
+  {
+    "type": "Brown Dwarfs",
+    "img": "https://assets.science.nasa.gov/dynamicimage/assets/science/astro/universe/internal_resources/409/brown_dwarf-1.jpeg?w=1200&h=675&fit=clip&crop=faces%2Cfocalpoint"
+  }
+]
