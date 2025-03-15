@@ -1,8 +1,8 @@
 // CRUD api calls for vocab cards
 // test api call
 const endpoint = 'https://broc-c-vocab-default-rtdb.firebaseio.com/';
-const getStars = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/stars.json`, {
+const getStars = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/stars.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

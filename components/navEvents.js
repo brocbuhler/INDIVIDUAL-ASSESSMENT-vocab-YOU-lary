@@ -4,12 +4,12 @@ import stellarFormPage from '../pages/stellarForm';
 import { getStars } from '../api/starsApiCalls';
 // import domEvents from './domEvents';
 
-const navEvents = () => {
+const navEvents = (user) => {
   document.querySelector('#nav-stars').addEventListener('click', () => {
-    getStars().then(starsPage);
+    getStars(user.uid).then((stars) => starsPage(stars, user));
   });
 
-  document.querySelector('#nav-form').addEventListener('click', stellarFormPage);
+  document.querySelector('#nav-form').addEventListener('click', () => stellarFormPage({}, user));
 };
 
 export default navEvents;
