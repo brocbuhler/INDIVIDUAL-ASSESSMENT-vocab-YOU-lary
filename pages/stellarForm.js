@@ -2,7 +2,11 @@ import renderToDOM from '../utils/render';
 import { clearDom } from './domStructure';
 import formEvents from '../components/formEvents';
 
-const stellarFormPage = (obj = {}) => {
+const stellarFormPage = (obj = {}, user) => {
+  if (!user) {
+    console.warn('No user is signed in!');
+    return; // Exit if user is not signed in or not available
+  }
   clearDom();
   const stellarForm = `<form id="${obj.firebaseKey ? `stellar-form--${obj.firebaseKey}` : 'submit-form'}">
  <input type="text" id="stellar-object-type" placeholder="Stellar Object" value="${obj.type || ''}" required>
@@ -11,6 +15,6 @@ const stellarFormPage = (obj = {}) => {
  <button id="subyag" type="submit">Submit</button>
  </form>`;
   renderToDOM('#form-container', stellarForm);
-  formEvents();
+  formEvents(user);
 };
 export default stellarFormPage;

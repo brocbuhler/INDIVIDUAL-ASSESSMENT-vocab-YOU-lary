@@ -2,7 +2,7 @@ import renderToDOM from '../utils/render';
 import { clearDom } from './domStructure';
 import domEvents from '../components/domEvents';
 
-const starsPage = (bodies) => {
+const starsPage = (bodies, user) => {
   clearDom();
   console.warn('page loaded');
   let stars = '<h1 id="test-star">Stars of the Galaxy</h1>';
@@ -15,6 +15,6 @@ const starsPage = (bodies) => {
   <p class="star-time">Time Added: ${item.timestamp}<p>`;
   });
   renderToDOM('#star-container', stars);
-  domEvents();
+  domEvents(user);
 };
 export default starsPage;
