@@ -1,13 +1,14 @@
 import renderToDOM from '../utils/render';
+import { clearDom } from './domStructure';
 
-const starsPage = (array) => {
+const starsPage = (bodies) => {
+  clearDom();
+  console.warn('page loaded');
   let stars = '<h1 id="test-star">this is the star page welcome</h1>';
-  array.forEach((item) => {
-    stars = `<div id="star-container">
-  <h3 class="star-card">${item.type}</h3>
-  <img class="star-img" src=${item.img}>
-  </div>`;
+  bodies.forEach((item) => {
+    stars += `<h3 class="star-card">${item.type}</h3>
+  <img class="star-img" src=${item.img}>`;
   });
-  renderToDOM('#app', stars);
+  renderToDOM('#star-container', stars);
 };
 export default starsPage;
