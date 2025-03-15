@@ -17,6 +17,7 @@ const getStars = () => new Promise((resolve, reject) => {
       }
     })
     .catch(reject);
+  console.warn('did getStars work');
 });
 
 const createStar = (payload) => new Promise((resolve, reject) => {
@@ -30,6 +31,7 @@ const createStar = (payload) => new Promise((resolve, reject) => {
     .then((response) => response.json())
     .then((data) => resolve(data))
     .catch(reject);
+  console.warn('did createStar work');
 });
 
 const updateStar = (payload) => new Promise((resolve, reject) => {
@@ -43,6 +45,37 @@ const updateStar = (payload) => new Promise((resolve, reject) => {
     .then((response) => response.json())
     .then(resolve)
     .catch(reject);
+  console.warn('did updateStar work');
 });
 
-export { getStars, createStar, updateStar };
+const deleteStar = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/stars/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+const getSingleStar = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/stars/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+export {
+  getStars,
+  createStar,
+  updateStar,
+  deleteStar,
+  getSingleStar,
+};
