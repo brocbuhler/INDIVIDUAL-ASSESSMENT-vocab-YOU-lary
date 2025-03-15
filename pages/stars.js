@@ -7,7 +7,9 @@ const starsPage = (bodies) => {
   let stars = '<h1 id="test-star">this is the star page welcome</h1>';
   bodies.forEach((item) => {
     stars += `<h3 class="star-card">${item.type}</h3>
-  <img class="star-img" src=${item.img}>`;
+  <img class="star-img" src=${item.img}>
+  <button id='update--${item.firebaseKey}'>Update</button>
+  <button id='delete--${item.firebaseKey}'>Delete</button>`;
   });
   renderToDOM('#star-container', stars);
 };
