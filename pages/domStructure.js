@@ -1,18 +1,13 @@
 import renderToDOM from '../utils/render';
-import { getStars } from '../api/starsApiCalls';
 
 const renderDom = () => {
   const domString = `
-  <h1 id='default-page'>Test Page</h1>
-    <button id="test-btn">TEST</button>
+  <h1 id='default-page'>Welcome to the Galaxy</h1>
+    <img id="galaxy" src="https://cdn.esahubble.org/archives/images/thumb700x/heic0602a.jpg">
     <div id='star-container'></div>
     <div id='form-container'></div>`;
   renderToDOM('#app', domString);
   console.warn('dom rendered');
-  const testBTN = document.querySelector('#test-btn');
-  testBTN.addEventListener('click', () => {
-    getStars().then(console.warn);
-  });
 };
 const clearDom = () => {
   const domString = `<div id='star-container'></div>

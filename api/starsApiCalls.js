@@ -48,4 +48,34 @@ const updateStar = (payload) => new Promise((resolve, reject) => {
   console.warn('did updateStar work');
 });
 
-export { getStars, createStar, updateStar };
+const deleteStar = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/stars/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+const getSingleStar = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/stars/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+export {
+  getStars,
+  createStar,
+  updateStar,
+  deleteStar,
+  getSingleStar,
+};
